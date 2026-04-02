@@ -5,12 +5,12 @@ import websockets
 
 async def test_chat():
     # Replace with the actual match ID from the API response
-    match_id = "da8d43ca-7752-4621-841c-aad4956f4c41"
+    match_id = "58395dcd-0639-40e5-899e-1fe15ebb61b4"
     uri = f"ws://localhost:8000/ws/chat/{match_id}/"
     
     print(f"Connecting to {uri}...")
     try:
-        async with websockets.connect(uri, additional_headers={"Origin": "http://localhost:8000"}) as websocket:
+        async with websockets.connect(uri, additional_headers={"Origin": "http://localhost:5173"}) as websocket:
             print("Connected!")
             
             # 1. Wait for connection established message
